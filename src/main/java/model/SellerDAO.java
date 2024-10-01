@@ -1,6 +1,6 @@
 package model;
 
-import entities.Seller;
+import model.entities.Seller;
 
 import java.util.List;
 

@@ -1,6 +1,4 @@
-package entities;
-
-import lombok.*;
+package model.entities;
 
 import java.io.Serializable;
 import java.util.Objects;
