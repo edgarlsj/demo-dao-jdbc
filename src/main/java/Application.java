@@ -32,6 +32,15 @@ public class Application {
         seller2.stream().forEach(System.out::println);
 
 
+        System.out.println("=== TEST 4: Seller insert ===");
+
+        Seller sellerInsert = new Seller(null,"Teste","teste@gmail.com", new Date(),3000.00, department );
+
+        sellerDAO.insert(sellerInsert);
+        System.out.println("Insert! new id ="+ sellerInsert.getId());
+
+
+
 
 
 
