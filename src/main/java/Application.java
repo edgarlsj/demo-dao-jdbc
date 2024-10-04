@@ -21,9 +21,14 @@ public class Application {
         System.out.println(seller1);
 
         System.out.println("=== TEST 2: Seller findByDepartment ===");
+
         Department department = new Department(2, null);
         List<Seller> seller2 = sellerDAO.findByDepartment(department);
+        seller2.stream().forEach(System.out::println);
 
+        System.out.println("=== TEST 3: Seller findAll ===");
+
+        seller2 = sellerDAO.findAll();
         seller2.stream().forEach(System.out::println);
 
 
