@@ -8,6 +8,7 @@ import java.util.*;
 public class Application {
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
         Department obj = new Department(2,"books");
 
         Seller seller = new Seller(21, "Bob", "bob@gmail.com", new Date() ,3000.00,obj);
@@ -35,9 +36,29 @@ public class Application {
         System.out.println("=== TEST 4: Seller insert ===");
 
         Seller sellerInsert = new Seller(null,"Teste","teste@gmail.com", new Date(),3000.00, department );
-
         sellerDAO.insert(sellerInsert);
         System.out.println("Insert! new id ="+ sellerInsert.getId());
+
+
+        System.out.println("=== TEST 5: Seller update ===");
+
+        seller = sellerDAO.findById(1);
+        seller.setName("Martha Whane");
+
+
+        sellerDAO.update(seller);
+        System.out.println("Update complete!");
+
+
+        System.out.println("=== TEST 6: Seller Delete ===");
+
+        System.out.println("Enter id for delete test ");
+        int id = sc.nextInt();
+        sellerDAO.deleteById(id);
+        System.out.println("Delete complete");
+
+        sc.close();
+
 
 
 
